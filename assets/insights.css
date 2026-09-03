@@ -12,3 +12,14 @@
 .faq-item summary{cursor:pointer;padding:18px 28px 18px 0;font-weight:800;line-height:1.35;color:var(--ink)}
 .faq-item p{margin:0 0 20px}
 .author-box p{margin-bottom:12px}
+
+
+.article-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:48px;align-items:center}
+.article-hero-media{overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.15);box-shadow:0 24px 58px rgba(0,0,0,.28);aspect-ratio:16/10}
+.article-hero-media img{display:block;width:100%;height:100%;object-fit:cover}
+.card{overflow:hidden;padding:0}
+.card-image{display:block;width:100%;height:190px;object-fit:cover;border-bottom:1px solid var(--line)}
+.card>.number,.card>h2,.card>p,.card>.read{margin-left:28px;margin-right:28px}
+.card>.number{margin-top:24px}
+.card>.read{margin-bottom:28px}
+@media(max-width:850px){.article-hero-grid{grid-template-columns:1fr}.article-hero-media{margin-top:8px}.card-image{height:220px}}
