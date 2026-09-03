@@ -23,3 +23,10 @@
 .card>.number{margin-top:24px}
 .card>.read{margin-bottom:28px}
 @media(max-width:850px){.article-hero-grid{grid-template-columns:1fr}.article-hero-media{margin-top:8px}.card-image{height:220px}}
+
+.feature-article .article-hero{padding-bottom:54px}
+.feature-article .article-hero-grid{grid-template-columns:1fr;gap:38px}
+.feature-article .article-hero-copy{max-width:980px}
+.feature-article .article-hero-media{width:100%;aspect-ratio:16/7;border-radius:24px}
+.feature-article .article-hero-media img{object-position:center 52%}
+@media(max-width:700px){.feature-article .article-hero{padding-top:58px}.feature-article .article-hero-grid{gap:28px}.feature-article .article-hero-media{aspect-ratio:16/10;border-radius:16px}}
