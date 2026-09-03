@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kwaw-ebn.github.io/ebenezer-kwaw-personal-website/sitemap.xml
