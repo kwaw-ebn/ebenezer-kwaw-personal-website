@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MineGuard Ghana | Safety and Environmental Intelligence</title>
+  <meta name="description" content="A demonstration platform for mining safety, environmental monitoring, community surveillance and accountable follow up in Ghana.">
+  <meta name="theme-color" content="#102c29"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css?v=20260925">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <a class="brand" href="../innovation-lab/"><span>MG</span><div><b>MineGuard Ghana</b><small>Safety Intelligence</small></div></a>
+    <nav aria-label="Application navigation">
+      <button class="active" data-page="overview">Overview</button>
+      <button data-page="report">New report</button>
+      <button data-page="environment">Environmental monitoring</button>
+      <button data-page="cases">Cases and actions</button>
+      <button data-page="map">Risk map</button>
+      <button data-page="reports">Reports</button>
+      <button data-page="access">Access preview</button>
+    </nav>
+    <div class="side-note"><strong>Portfolio MVP</strong><span>Synthetic or deidentified data only</span></div>
+  </aside>
+  <main>
+    <header><div><h1 id="pageTitle">Overview</h1><p>Ghana focused mining health, safety and environmental intelligence</p></div><div class="header-actions"><span class="status"><i id="networkDot"></i><span id="networkText">Online</span></span><button id="installBtn" class="button ghost" hidden>Install app</button><a class="button ghost" href="../innovation-lab/">Innovation Lab</a></div></header>
+    <div class="content">
+      <section id="overview" class="page active">
+        <div class="hero"><div><p class="eyebrow">Management intelligence</p><h2>See risk early. Coordinate action. Protect people and places.</h2><p>MineGuard brings safety incidents, environmental observations and corrective actions into one accountable monitoring workflow.</p></div><div class="hero-mark"><span>Decision support</span><b>Not automatic enforcement</b></div></div>
+        <div id="kpis" class="kpis"></div>
+        <div class="grid two"><article class="card"><div class="card-head"><h3>Priority cases</h3><span>Needs review</span></div><div id="priorityCases"></div></article><article class="card"><div class="card-head"><h3>Risk by category</h3><span>Current records</span></div><div id="categoryBars"></div></article></div>
+        <article class="card"><div class="card-head"><h3>Recent activity</h3><span>Audit ready summary</span></div><div id="recentTable"></div></article>
+      </section>
+
+      <section id="report" class="page">
+        <div class="page-intro"><div><p class="eyebrow">Structured field reporting</p><h2>Record a safety or environmental concern</h2></div><p>Use approved operational or community level information. Do not enter personal medical information in this demonstration.</p></div>
+        <form id="incidentForm" class="card form-card">
+          <div class="form-grid">
+            <label>Date and time<input id="occurredAt" type="datetime-local" required></label>
+            <label>Site or community<input id="locationName" required placeholder="Demonstration location"></label>
+            <label>Report type<select id="reportType"><option>Safety incident</option><option>Near miss</option><option>Environmental observation</option><option>Community concern</option><option>Occupational health screening flag</option></select></label>
+            <label>Area<select id="area"><option>Processing</option><option>Open pit</option><option>Underground</option><option>Water body</option><option>Community boundary</option><option>Rehabilitation area</option></select></label>
+            <label>Observed severity<select id="severity"><option value="1">Low</option><option value="2">Moderate</option><option value="3">High</option><option value="4">Critical</option></select></label>
+            <label>Exposure or recurrence<select id="recurrence"><option value="0">First observation</option><option value="1">Previously observed</option><option value="2">Repeated concern</option></select></label>
+            <label>Immediate control applied<select id="control"><option value="yes">Yes</option><option value="partial">Partially</option><option value="no">No</option></select></label>
+            <label>Professional review required<select id="reviewRequired"><option value="yes">Yes</option><option value="no">Not yet determined</option></select></label>
+            <label>Location consent<select id="gpsConsent"><option value="no">Not provided</option><option value="yes">Provided for site reporting</option></select></label>
+            <label>Latitude<input id="latitude" inputmode="decimal" placeholder="Capture or enter"></label><label>Longitude<input id="longitude" inputmode="decimal" placeholder="Capture or enter"></label><label class="gps-control">GPS<button id="gpsBtn" type="button" class="button pale">Capture location</button></label>
+            <label class="wide">Observation summary<textarea id="summary" rows="4" required placeholder="Describe the observable concern without naming individuals"></textarea></label>
+          </div>
+          <div class="form-actions"><button type="reset" class="button ghost">Clear</button><button class="button primary" type="submit">Assess and save report</button></div>
+        </form><div id="saveResult"></div>
+      </section>
+
+      <section id="environment" class="page">
+        <div class="page-intro"><div><p class="eyebrow">Environmental monitoring</p><h2>Record approved measurements</h2></div><p>Thresholds shown here are illustrative and require expert and regulatory validation before operational use.</p></div>
+        <form id="monitorForm" class="card form-card"><div class="form-grid"><label>Date<input id="monitorDate" type="date" required></label><label>Monitoring point<input id="monitorPoint" required></label><label>Indicator<select id="indicator"><option>Water pH</option><option>Turbidity</option><option>Dust or particulate</option><option>Noise</option><option>Land rehabilitation</option></select></label><label>Result<input id="resultValue" type="number" step="0.01" required></label><label>Unit<input id="resultUnit" placeholder="e.g. pH, NTU, dB"></label><label>Expert review threshold<input id="threshold" type="number" step="0.01"></label><label class="wide">Observation<textarea id="monitorNotes" rows="3"></textarea></label></div><div class="form-actions"><button class="button primary" type="submit">Save measurement</button></div></form>
+        <article class="card"><div class="card-head"><h3>Monitoring register</h3><span>Demonstration records</span></div><div id="monitorTable"></div></article>
+      </section>
+
+      <section id="cases" class="page"><div class="page-intro"><div><p class="eyebrow">Accountable follow up</p><h2>Cases and corrective actions</h2></div><p>Assign professional review, document action and close a case only when evidence supports completion.</p></div><article class="card"><div id="caseTable"></div></article></section>
+      <section id="map" class="page"><div class="page-intro"><div><p class="eyebrow">Spatial intelligence</p><h2>Aggregated risk map</h2></div><p>Locations are displayed as demonstration monitoring areas, not evidence of unlawful activity.</p></div><div class="grid map-grid"><article class="card"><div id="mapBoard" class="map-board"></div><div class="legend"><span><i class="routine"></i>Routine</span><span><i class="review"></i>Review</span><span><i class="priority"></i>Priority</span></div></article><article class="card"><h3>Location summaries</h3><div id="mapList"></div></article></div></section>
+      <section id="reports" class="page"><div class="page-intro"><div><p class="eyebrow">Management reporting</p><h2>Decision ready summaries</h2></div><p>Generate operational reports without exposing individual health information.</p></div><div class="toolbar"><input id="reportMonth" type="month"><button id="generateReport" class="button primary">Generate</button><button id="downloadCsv" class="button pale">Download CSV</button><button id="printReport" class="button ghost">Print or save PDF</button></div><article id="reportOutput" class="card report-output"></article></section>
+      <section id="access" class="page"><div class="page-intro"><div><p class="eyebrow">Least privilege</p><h2>Role and access preview</h2></div><p>This interface preview does not replace server verified authentication required for real deployment.</p></div><article class="card form-card"><div class="form-grid"><label>Role<select id="roleSelect"><option>Administrator</option><option>Occupational Health Officer</option><option>Mine Safety Officer</option><option>Environmental Officer</option><option>Community Relations Officer</option><option>Management Viewer</option><option>Data Analyst</option><option>Regulatory Observer</option></select></label><label>Assigned site<input value="Demonstration Site A" disabled></label><label>Data scope<input value="Approved summaries and assigned cases" disabled></label></div><div id="roleSummary" class="role-summary"></div></article></section>
+    </div>
+  </main>
+</div>
+<script src="app.js?v=20260925"></script>
+</body></html>
