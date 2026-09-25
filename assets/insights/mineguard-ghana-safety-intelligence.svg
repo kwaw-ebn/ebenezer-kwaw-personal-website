@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">MineGuard Ghana safety and environmental intelligence dashboard</title>
+  <desc id="desc">A dark green monitoring interface with safety reports, environmental signals, corrective actions and a risk map.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061d1c"/><stop offset="1" stop-color="#0b5148"/></linearGradient>
+    <linearGradient id="map" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcece4"/><stop offset="1" stop-color="#bddace"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#001816" flood-opacity=".28"/></filter>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0H0V46" fill="none" stroke="#0b5148" stroke-opacity=".14"/></pattern>
+  </defs>
+  <rect width="1200" height="675" rx="34" fill="#edf4ef"/>
+  <rect width="245" height="675" rx="34" fill="url(#bg)"/>
+  <rect x="26" y="26" width="62" height="62" rx="18" fill="#efb640"/><text x="57" y="66" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" font-weight="800" fill="#08322e">MG</text>
+  <text x="104" y="51" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="white">MineGuard Ghana</text><text x="104" y="75" font-family="Arial,sans-serif" font-size="12" fill="#a8d7d0">Safety Intelligence</text>
+  <g font-family="Arial,sans-serif" font-size="15" fill="#d4ebe6"><text x="34" y="150">Overview</text><text x="34" y="203">New report</text><text x="34" y="256">Environmental monitoring</text><text x="34" y="309">Cases and actions</text></g>
+  <rect x="18" y="337" width="209" height="48" rx="12" fill="#ffffff" fill-opacity=".13"/><text x="34" y="368" font-family="Arial,sans-serif" font-size="15" fill="white">Risk map</text>
+  <g font-family="Arial,sans-serif" font-size="15" fill="#d4ebe6"><text x="34" y="423">Reports</text><text x="34" y="476">Access preview</text></g>
+  <text x="285" y="52" font-family="Arial,sans-serif" font-size="16" fill="#5d7671">SPATIAL INTELLIGENCE</text><text x="285" y="105" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#12352f">Aggregated risk map</text>
+  <rect x="285" y="139" width="590" height="482" rx="25" fill="white" filter="url(#shadow)"/><rect x="307" y="161" width="546" height="438" rx="18" fill="url(#map)"/><rect x="307" y="161" width="546" height="438" rx="18" fill="url(#grid)"/>
+  <g filter="url(#shadow)"><circle cx="408" cy="255" r="13" fill="#cf514d" stroke="white" stroke-width="5"/><circle cx="560" cy="273" r="13" fill="#168f81" stroke="white" stroke-width="5"/><circle cx="714" cy="375" r="13" fill="#df8d2f" stroke="white" stroke-width="5"/><circle cx="585" cy="490" r="13" fill="#df8d2f" stroke="white" stroke-width="5"/></g>
+  <rect x="900" y="139" width="268" height="482" rx="25" fill="white" filter="url(#shadow)"/><text x="928" y="181" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#12352f">Location summaries</text>
+  <g font-family="Arial,sans-serif"><text x="928" y="229" font-size="15" font-weight="700" fill="#12352f">Submitted monitoring area</text><text x="928" y="252" font-size="12" fill="#71847f">Priority review signal</text><line x1="928" y1="273" x2="1140" y2="273" stroke="#dce7e2"/><text x="928" y="315" font-size="15" font-weight="700" fill="#12352f">River monitoring point</text><text x="928" y="338" font-size="12" fill="#71847f">Environmental observation</text><line x1="928" y1="359" x2="1140" y2="359" stroke="#dce7e2"/><text x="928" y="401" font-size="15" font-weight="700" fill="#12352f">Community boundary</text><text x="928" y="424" font-size="12" fill="#71847f">Review signal</text><line x1="928" y1="445" x2="1140" y2="445" stroke="#dce7e2"/><text x="928" y="487" font-size="15" font-weight="700" fill="#12352f">Rehabilitation zone</text><text x="928" y="510" font-size="12" fill="#71847f">Routine review signal</text></g>
+  <rect x="900" y="559" width="139" height="35" rx="17.5" fill="#e9f7f1"/><circle cx="922" cy="576" r="5" fill="#159277"/><text x="935" y="581" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#0b5148">Decision support</text>
+</svg>
