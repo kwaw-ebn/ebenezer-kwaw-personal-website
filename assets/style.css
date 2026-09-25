@@ -14,6 +14,42 @@
 .consultation-details strong,.consultation-details small{display:block}
 .consultation-details strong{color:#fff;font-size:15px}
 .consultation-details small{color:#9fc1cc;margin-top:4px;line-height:1.4}
+
+/* Clean section labels and protect the portrait on small screens */
+.eyebrow:before{display:none!important}
+@media(max-width:600px){
+  .hero-visual{
+    height:470px;
+    padding-bottom:78px;
+  }
+  .hero-visual .portrait{
+    inset:15px 15px 88px!important;
+  }
+  .hero-visual .float-card{
+    top:auto!important;
+    bottom:8px!important;
+    min-width:0;
+    width:calc(50% - 20px);
+    padding:11px 12px;
+    grid-template-columns:25px 1fr;
+    box-shadow:0 10px 28px rgba(7,27,46,.12);
+  }
+  .hero-visual .fc1{left:15px!important}
+  .hero-visual .fc2{right:15px!important}
+  .hero-visual .float-card b{font-size:12px}
+  .hero-visual .float-card small{font-size:10px;line-height:1.3}
+}
+@media(max-width:370px){
+  .hero-visual{height:500px}
+  .hero-visual .portrait{inset:15px 15px 145px!important}
+  .hero-visual .float-card{
+    width:calc(100% - 30px);
+    left:15px!important;
+    right:15px!important;
+  }
+  .hero-visual .fc1{bottom:72px!important}
+  .hero-visual .fc2{bottom:8px!important}
+}
 .consultation-action{padding:30px;border-radius:18px;background:#fff;color:var(--ink);box-shadow:var(--shadow)}
 .consultation-action p{margin-top:0;color:#526572}
 .consultation-button{width:100%;margin:10px 0 12px}
