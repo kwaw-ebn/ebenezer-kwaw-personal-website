@@ -84,13 +84,14 @@
           <div class="project-body">
             <p class="project-type">Financial planning and budget intelligence</p>
             <h3>BudgetIQ AI</h3>
-            <p>A full-stack budgeting prototype connecting activity costs, financial evidence, supplier comparison, internal funding releases and reviewed commitments. Seeking finance, procurement, security and data collaborators to test the controls.</p>
+            <p>BudgetIQ began with a practical challenge: turn an annual action plan into an editable institutional budget. Bismark Adams's research on Ghanaian fiscal forecasting sharpened its approach to revised estimates, actual results and honest forecast testing. The evolving MVP connects activity costs, funding decisions, procurement review and financial evidence.</p>
+            <p><strong>Collaboration call:</strong> Budget officers, accountants, procurement practitioners, researchers and data scientists can review the case study and help test costing rules, approval paths and forecast methods. Institutions with permission to share historical approved budgets, revisions and actual results can help design a careful evaluation. Privacy and data access must be agreed before any records are shared.</p>
             <div class="capabilities"><span>Activity costing</span><span>Funding gaps</span><span>Procurement comparison</span><span>Commitment control</span><span>Budget vs actual</span><span>Forecast comparison</span></div>
             <div class="project-actions">
               <a class="button primary" href="../insights/budgetiq-ai-budget-intelligence-platform.html">Read full case study</a>
               <a class="text-link" href="https://budgetiq-ai.onrender.com/" target="_blank" rel="noopener">Open MVP ↗</a>
               <a class="text-link" href="https://github.com/kwaw-ebn/BudgetIQ_AI" target="_blank" rel="noopener">View GitHub ↗</a>
-              <a class="text-link" href="#collaborate">Collaborate →</a>
+              <a class="text-link" href="#collaborate" data-project="BudgetIQ AI">Offer BudgetIQ expertise →</a>
             </div>
           </div>
         </article>
@@ -206,7 +207,7 @@
           <div><b>Privacy, security and governance</b><p>Strengthen consent, access control, auditability and responsible data exchange.</p></div>
           <div><b>Interoperability and engineering</b><p>Review architecture, standards, reliability and integration pathways.</p></div>
           <div><b>Usability and evaluation</b><p>Design realistic user testing, pilot measures and accessibility improvements.</p></div>
-          <div><b>BudgetIQ finance and procurement review</b><p>Test costing, supplier comparisons, funding releases, separation of duties, budget-versus-actual logic and forecast validation with qualified teams.</p></div>
+          <div><b>BudgetIQ research and finance review</b><p>Review the <a href="../insights/budgetiq-ai-budget-intelligence-platform.html">research-informed case study</a>, test costing and procurement controls, and help define a permitted dataset of approved budgets, revisions and actual results for out-of-sample forecast checks.</p></div>
           <div><b>Loan Portfolio Lab model evaluation</b><p>Recover the data and reproduce performance, calibration and subgroup checks before considering any operational use.</p></div>
         </div>
       </div>
@@ -240,6 +241,7 @@
       </div>
     </section>
   </main>
+  <script>document.querySelectorAll('a[data-project]').forEach(link => link.addEventListener('click', () => { const field = document.querySelector('select[name="project"]'); if (field) field.value = link.dataset.project; }));</script>
 
   <footer>
     <div class="shell footer-grid">
